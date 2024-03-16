@@ -1,10 +1,14 @@
 class Juego{
-    roll() {
-       
+    constructor()
+    {
+        this.puntajeAcumulado=0;
+    }
+    roll(pins) {
+       this.puntajeAcumulado+=pins;
       }
     get score()
     {
-        return 0;
+        return this.puntajeAcumulado;
     }
 }
 
