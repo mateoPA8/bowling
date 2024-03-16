@@ -1,8 +1,7 @@
 import Juego from "./juego";
-
+let game=new Juego();
 describe("Bolos", () => {
   it("deberia retornar 0 en los 20 juegos", () => {
-    const game=new Juego();
     for(let i=0;i<20;i++)
     {
         game.roll(0);
@@ -10,7 +9,6 @@ describe("Bolos", () => {
     expect(game.score).toEqual(0)
   });
   it("deberia retornar 20 si derribo 1 pino por cada tiro", () => {
-    const game=new Juego();
     for(let i=0;i<20;i++)
     {
         game.roll(1);
