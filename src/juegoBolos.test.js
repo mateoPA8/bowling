@@ -19,6 +19,13 @@ describe("Bolos", () => {
     rollMany(0,17);
     expect(game.score).toEqual(16);
   });
+  it("deberia retornar el resultado correcto en caso de que haya un strike ", () => {
+    game.roll(10);
+    game.roll(1);
+    game.roll(1);
+    rollMany(0,17);
+    expect(game.score).toEqual(14);
+  });
 });
 
 function rollMany(pins, rolls)
